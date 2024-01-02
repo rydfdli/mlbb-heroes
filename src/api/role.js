@@ -5,21 +5,31 @@ import React, {
   
   import axios from 'axios'
 
-const getHeroByRole = (role) => {
+const getHeroByRole = (url) => {
     const [data, setData] = useState([]);
     useEffect(() => {
+      let mounted = true
       const fetchData = async () => {
         try {
-          const response = await axios.get(`https://express-mlbb-api.vercel.app/mobile-legends/role/${role}`);
-          setData(response.data)
-          console.log(role)
+          const response = await axios.get(url)
+
+          if (mounted) {
+            setData(response.data)
+          }
         } catch (error) {
-          console.error('Terjadi kesalahan:', error);
+          if (mounted) {
+            console.error('Terjadi kesalahan:', error)
+          }
         }
       };
   
-      fetchData();
-    }, []);
+      fetchData()
+
+      return () => {
+        mounted = false;
+      }
+
+    }, [url]);
   
     return data;
   }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Card({data}) {
 
@@ -8,7 +9,7 @@ export default function Card({data}) {
         <div className="card mb-2 w-full shadow-lg rounded-md">
             <div className="card-body flex items-center">
                 <h1 className="card-title text-3xl font-jakarta">
-                    {data.hero_name} 
+                    <Link to={`/hero/${data.mlid}`} className='my-2'>{data.hero_name}</Link>
                 </h1>
                 <img src={data.portrait} alt={data.portrait} className='rounded-full w-[100px]'/>
                 <p className='font-Raleway'>{data.class}</p>

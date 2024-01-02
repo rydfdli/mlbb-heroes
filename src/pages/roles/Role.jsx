@@ -1,15 +1,15 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import getElementById from '../../api/role'
+import getHeroByRole from '../../api/role'
 import Card from '../../components/Card'
 import Skleton from '../../components/Skleton'
 
-export default function Tank() {
+export default function Role() {
 
-  const { role } = useParams()
-  const data = getElementById(role)
+  const {role} = useParams()
+  const data = getHeroByRole(`https://express-mlbb-api.vercel.app/mobile-legends/role/${role}`)
 
-
+  
   if (data.length === 0) {
     return (
       <div className='p-4 grid md:grid-cols-2 lg:grid-cols-3 gap-2'>

@@ -26,37 +26,37 @@ export default function Drawer() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="roles/1/fighter" className='normal-case text-lg'>
+                        <Link to="roles/fighter" className='normal-case text-lg'>
                             <GiCrossedSwords />
                             Fighter
                         </Link>
                     </li>
                     <li>
-                        <Link to="roles/2/assassin" className='normal-case text-lg'>
+                        <Link to="roles/assassin" className='normal-case text-lg'>
                             <GiSharpShuriken /> 
                             Assasins
                         </Link>
                     </li>
                     <li>
-                        <Link to="roles/3/marksman" className='normal-case text-lg'>
+                        <Link to="roles/marksman" className='normal-case text-lg'>
                             <GiBowArrow /> 
                             Marksman
                         </Link>
                     </li>
                     <li>
-                        <Link to="roles/4/mage" className='normal-case text-lg'>
+                        <Link to="roles/mage" className='normal-case text-lg'>
                             <GiAlienFire /> 
                             Mage
                         </Link>
                     </li>
                     <li>
-                        <Link to="roles/5/tank" className='normal-case text-lg'>
+                        <Link to="roles/tank" className='normal-case text-lg'>
                             <GiSlashedShield /> 
                             Tank
                         </Link>
                     </li>
                     <li>
-                        <Link to="roles/6/support" className='normal-case text-lg'>
+                        <Link to="roles/support" className='normal-case text-lg'>
                             <GiAngelOutfit /> 
                             Support
                         </Link>
