@@ -16,7 +16,9 @@ export default function Details() {
 
     if (data.length === 0) {
         return (
-            <h1>Loading...</h1>
+            <div className='flex justify-center mt-3.5'>
+                <span className="loading loading-ring loading-lg"></span>
+            </div>
         )
     } else {
         if (!attr) {
