@@ -23,10 +23,10 @@ export default function Details() {
                     <div className='flex flex-col lg:block items-center'>
                         <h1 className='text-3xl font-jakarta font-bold'>{data.hero_name}</h1>
                         <p className='font-extralight text-sm text-slate-500'>{data.class}</p>
-                        <img src={data.portrait} alt={data.hero_name} className='my-2' />
+                        <img src={data.portrait} alt={data.hero_name} className='my-2 mask mask-squircle' />
                         {data.laning.map((i, id) => (
                             (i.length > 0) ?
-                                <div className="badge badge-outline font-Raleway px-4 py-3 mr-2 mb-2" key={id}>{i}</div> : <div className="badge badge-outline font-Raleway" key={id}>unknow</div>
+                                <div className="badge badge-outline font-Raleway px-4 py-3 mr-2 my-3 mb-2 hidden lg:inline-flex" key={id}>{i}</div> : <div className="badge badge-outline font-Raleway" key={id}>unknow</div>
                         ))}
                         {
                             attr.map((i, id) => (
