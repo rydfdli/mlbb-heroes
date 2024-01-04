@@ -24,7 +24,7 @@ export default function Details() {
                         <img src={data.portrait} alt={data.hero_name} className='my-2' />
                         {data.laning.map((i, id) => (
                             (i.length > 0) ?
-                                <div className="badge badge-outline font-Raleway px-4 py-3 mr-2" key={id}>{i}</div> : <div className="badge badge-outline font-Raleway" key={id}>unknow</div>
+                                <div className="badge badge-outline font-Raleway px-4 py-3 mr-2 mb-2" key={id}>{i}</div> : <div className="badge badge-outline font-Raleway" key={id}>unknow</div>
                         ))}
                         <Indicators />
                     </div>
