@@ -10,6 +10,8 @@ export default function Details() {
     const data = getHeroDetails(id)
     const skills = data.skills
 
+    const attr = data.base_attributes
+
     if (data.length === 0) {
         return (
             <h1>Loading...</h1>
@@ -26,7 +28,11 @@ export default function Details() {
                             (i.length > 0) ?
                                 <div className="badge badge-outline font-Raleway px-4 py-3 mr-2 mb-2" key={id}>{i}</div> : <div className="badge badge-outline font-Raleway" key={id}>unknow</div>
                         ))}
-                        <Indicators />
+                        {
+                            attr.map((i, id) => (
+                                <Indicators key={id} data={i} />
+                            ))
+                        }
                     </div>
                 </div>
                 <div className='w-full lg:w-2/3 py-3'>
