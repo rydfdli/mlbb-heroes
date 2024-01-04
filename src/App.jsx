@@ -3,6 +3,7 @@ import Home from "./pages/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Role from "./pages/roles/Role"
 import Blank from "./pages/Blank"
+import Details from "./pages/Details"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="pages/:category" element={<Categories />} />
             <Route path="contact" element={<Contact />} />
              */}
+             <Route path="/hero/:id" element={<Details />} />
         </Route>
       </Routes>
     </BrowserRouter>

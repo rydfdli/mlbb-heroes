@@ -18,7 +18,7 @@ const getHeroDetails = (id) => {
       };
   
       fetchData();
-    }, []);
+    }, [id]);
   
     return data;
   }
