@@ -11,7 +11,7 @@ export default function Card({data}) {
                 <h1 className="card-title text-3xl font-jakarta">
                     <Link to={`/hero/${data.mlid}`} className='my-2'>{data.hero_name}</Link>
                 </h1>
-                <img src={data.portrait} alt={data.portrait} className='rounded-full w-[100px]'/>
+                <img src={data.portrait} alt={data.portrait} className='mask mask-squircle w-[100px]'/>
                 <p className='font-Raleway'>{data.class}</p>
                 <span className='text-sm font-extralight text-gray-500'>Release Date: {data.release_year}</span>
                 <div className="card-actions justify-end">
